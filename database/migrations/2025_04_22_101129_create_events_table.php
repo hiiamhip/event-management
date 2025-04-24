@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->string('title');
+            $table->string('name');
             $table->text('description')->nullable();
             $table->dateTime('start_time');
             $table->dateTime('end_time');
