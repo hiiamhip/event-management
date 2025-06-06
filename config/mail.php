@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => env('MAIL_MAILER', 'mailhog'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,6 +83,15 @@ return [
                 'smtp',
                 'log',
             ],
+        ],
+
+        'mailhog' => [
+            'transport' => 'smtp',
+            'host' => '127.0.0.1',     // MailHog SMTP server host
+            'port' => 1025,            // MailHog SMTP server port
+            'encryption' => null,      // No encryption is used for MailHog
+            'username' => null,        // No username is required for MailHog
+            'password' => null,        // No password is required for MailHog
         ],
     ],
 
